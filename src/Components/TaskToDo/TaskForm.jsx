@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ButtonTag from './ButtonTag'
 
 const TaskForm = () => {
+    const [Task, setTask] = useState();
+    console.log(Task)
+    const handleTaskChange = e => {
+        setTask(e.target.value);
+    }
     return (
         <>
             <header className='flex flex-row justify-center mt-10'>
                 <form className='w-[full]'>
-                    <input type="text" name="taskName" id="" placeholder='Enter your Task' className='w-[100%] border-2 rounded-sm placeholder:text-center text-center p-1 border-gray-900 mb-5 bg-slate-100' />
+                    <input type="text"
+                        name="taskName"
+                        id="" placeholder='Enter your Task'
+                        className='w-[100%] border-2 rounded-sm placeholder:text-center text-center p-1 border-gray-900 mb-5 bg-slate-100'
+                        onChange={handleTaskChange} />
 
                     <br />
                     <ButtonTag tagName={'HTML'} />
