@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from './Card';
 
-const TaskSection = ({ sectionName, icon }) => {
+const TaskSection = ({ sectionName, icon, tasks, status, handleDelete }) => {
     // console.log(img)
+    // console.log(tasks, status)
     return (
 
         <>
@@ -11,9 +12,21 @@ const TaskSection = ({ sectionName, icon }) => {
                     <img src={icon} alt="" className='w-6 mr-2 inline' />
                     {sectionName}
                 </div>
-                <Card title={'Try to comple the task data'} />
+                {
+                    tasks.map((task, index) =>
+                        task.status === status
+                        &&
+                        <Card key={index}
+                            title={task.task}
+                            handleDelete={handleDelete}
+                            tags={task.tags}
+                            index={index}
+                        />)
+                }
             </section>
+            {/* <Card title={'Try to comple the task data'} /> */}
         </>
+
     )
 }
 
