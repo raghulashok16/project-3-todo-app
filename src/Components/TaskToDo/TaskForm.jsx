@@ -61,7 +61,7 @@ const TaskForm = ({ setTasks }) => {
                     <ButtonTag tagName={'CSS'} selectTag={selectTag} selected={checkTag('CSS')} />
                     <ButtonTag tagName={'Javascript'} selectTag={selectTag} selected={checkTag('Javascript')} />
                     <ButtonTag tagName={'React'} selectTag={selectTag} selected={checkTag('React')} />
-                    <select className='p-2 rounded-md border-2 mx-3 selection:bg-red-500 font-inter font-medium text-sm inline'
+                    <select className='p-2 rounded-md border-2 mx-3 selection:bg-red-500 font-medium text-sm inline'
                         onChange={handleChange}
                         name="status"
                         value={taskData.status} >

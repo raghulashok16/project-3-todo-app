@@ -17,7 +17,7 @@ const TaskToDo = () => {
         setTasks(newTasks);
     }
     return (
-        <div className='flex flex-col items-center min-h-screen'>
+        <div className='flex flex-col items-center min-h-screen font-sans'>
             <TaskForm setTasks={setTasks} />
             <div class="w-[90%] h-0.5 mx-auto my-4 bg-gray-300 rounded"></div>
             <main className='flex flex-row w-[80%] justify-evenly'>
