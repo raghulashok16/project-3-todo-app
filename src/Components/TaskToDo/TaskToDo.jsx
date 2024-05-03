@@ -17,10 +17,10 @@ const TaskToDo = () => {
         setTasks(newTasks);
     }
     return (
-        <div className='flex flex-col items-center min-h-screen
-         bg-gradient-to-t from-orange-50 via-violet-50 to-blue-50 ...'>
+        <div className='flex flex-col items-center min-h-screen'>
             <TaskForm setTasks={setTasks} />
-            <main className='flex flex-row w-[80%] justify-evenly mt-8'>
+            <div class="w-[90%] h-0.5 mx-auto my-4 bg-gray-300 rounded"></div>
+            <main className='flex flex-row w-[80%] justify-evenly'>
                 <TaskSection sectionName={'To Do'} icon={targetIcon} tasks={tasks} status={'To Do'} handleDelete={handleDelete} />
                 <TaskSection sectionName={'Doing'} icon={doneIcon} tasks={tasks} status={'Doing'} handleDelete={handleDelete} />
                 <TaskSection sectionName={'Done'} icon={starIcon} tasks={tasks} status={'Done'} handleDelete={handleDelete} />
