@@ -1,1 +1,1 @@
-https://delter-tailwind-react-projects.netlify.app/
+https://delter-todo-app.netlify.app
